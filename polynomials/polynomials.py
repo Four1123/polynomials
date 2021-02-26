@@ -23,15 +23,15 @@ class Polynomial:
 
         # Remaining terms look like cx^d, though factors of 1 are dropped.
         terms += [f"{'' if c == 1 else c}x^{d}"
-                  for d, c in enumerate(coefs[2 : ], start = 2) if c]
+                  for d, c in enumerate(coefs[2:], start=2) if c]
 
         # Sum polynomial terms from high to low exponent.      
         return ' + '.join(reversed(terms)) or '0'
 
  
-    # def __repr__(self):
+        # def __repr__(self):
 
-    #     return self.__class__.__name__ + "(" + repr(self.coefficients) + ")"
+        # return self.__class__.__name__ + "(" + repr(self.coefficients) + ")"
 
 
     def __eq__(self, other):
